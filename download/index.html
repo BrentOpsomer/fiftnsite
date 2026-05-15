@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Download FIFTN</title>
+  <meta name="description" content="Download FIFTN on the App Store or Google Play." />
+  <meta name="robots" content="noindex" />
+  <style>
+    :root {
+      --bg-a: #003186;
+      --bg-b: #010048;
+      --bg-c: #370b69;
+      --cyan: #28e7ff;
+      --pink: #ff2de2;
+      --text: #f6fbff;
+      --muted: rgba(246, 251, 255, 0.72);
+      --card: rgba(7, 10, 32, 0.74);
+      --border: rgba(40, 231, 255, 0.38);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 12%, rgba(40, 231, 255, 0.28), transparent 28%),
+        radial-gradient(circle at 86% 90%, rgba(255, 45, 226, 0.3), transparent 30%),
+        linear-gradient(135deg, var(--bg-a), var(--bg-b) 48%, var(--bg-c));
+    }
+
+    main {
+      width: min(100%, 440px);
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--card);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      letter-spacing: 0.16em;
+      color: var(--cyan);
+    }
+
+    p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    a {
+      display: block;
+      padding: 15px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    a.primary {
+      border-color: transparent;
+      background: linear-gradient(90deg, var(--cyan), var(--pink));
+      color: #081024;
+    }
+  </style>
+  <script>
+    const appStoreUrl = "https://apps.apple.com/app/id6758054820";
+    const playStoreUrl = "https://play.google.com/store/apps/details?id=com.brentdeveloping.fiftn";
+    const userAgent = navigator.userAgent || navigator.vendor || "";
+
+    if (/android/i.test(userAgent)) {
+      window.location.replace(playStoreUrl);
+    } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+      window.location.replace(appStoreUrl);
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <h1>FIFTN</h1>
+    <p>Your next party app. Choose your store to download.</p>
+    <div class="buttons">
+      <a class="primary" href="https://apps.apple.com/app/id6758054820">Download on App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.brentdeveloping.fiftn">Get it on Google Play</a>
+      <a href="../">Visit website</a>
+    </div>
+  </main>
+</body>
+</html>
