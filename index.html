@@ -1,26 +1,20 @@
 <!doctype html>
-<html lang="nl-BE">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FIFTN — Terms & Privacy</title>
-    <meta name="description" content="FIFTN party game — Terms of Service & Privacy Policy." />
+    <title>FIFTN | Party Game for Friends</title>
+    <meta name="description" content="One phone, five party games. Spin the wheel, pass the phone and play FIFTN with friends." />
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
 
     <header class="header">
-        <div class="brand">
-            <div class="logo">
-                <img src="./assets/logo.svg" alt="FIFTN logo" />
-            </div>
-            <div class="brand-text">
-                <!-- <div class="brand-name">FIFTN</div> -->
-                <!-- <div class="brand-sub">Party game</div> -->
-            </div>
-        </div>
+        <a class="brand" href="#/home" aria-label="FIFTN home">
+            <img src="./assets/logo.svg" alt="FIFTN" width="54" height="54" />
+        </a>
 
         <nav class="nav" aria-label="Primary navigation">
             <a class="nav-link" href="#/home" data-route="home">Home</a>
@@ -29,56 +23,61 @@
         </nav>
     </header>
 
-    <main class="main" id="app" role="main">
-        <!-- HOME -->
-        <section class="card route" data-route="home">
-            <h1>FIFTN — Party Game App</h1>
-            <p class="lead">
-                FIFTN is a social party game app built for groups of friends.
-                Play chaotic mini-games, answer spicy questions, complete challenges,
-                and turn any night into a party.
-            </p>
-
-            <div class="grid">
-                <div class="panel">
-                    <h2>Game Modes</h2>
-                    <ul>
-                        <li><strong>Fifteen Minutes of Chaos</strong> — the main chaos wheel</li>
-                        <li><strong>Never Have I Ever</strong> — classic party questions</li>
-                        <li>Fast Enough — reaction game</li>
-                        <li>Spin The Bottle — digital bottle spin</li>
-                        <li>Who’s Most Likely — group voting</li>
-                    </ul>
+    <main class="main" id="app" tabindex="-1">
+        <section class="route landing" data-route="home">
+            <div class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="signal"></span> THE PARTY GAME FOR FRIENDS</p>
+                    <h1>Spin. Dare.<br /><em>Pass it on.</em></h1>
+                    <p class="lead">Pass one phone around and see where the night goes. Spin for truths, dares and rules in a 15-minute round of chaos.</p>
+                    <div class="cta-row">
+                        <a class="btn primary" href="https://apps.apple.com/app/id6758054820">App Store <span aria-hidden="true">&#8599;</span></a>
+                        <a class="btn" href="https://play.google.com/store/apps/details?id=com.brentdeveloping.fiftn">Google Play <span aria-hidden="true">&#8599;</span></a>
+                    </div>
+                    <p class="micro">FREE TO DOWNLOAD <span aria-hidden="true">/</span> NO ACCOUNT REQUIRED</p>
                 </div>
 
-                <div class="panel">
-                    <h2>How it works</h2>
-                    <ul>
-                        <li>One phone, play together</li>
-                        <li>No accounts required</li>
-                        <li>Instant start, no setup</li>
-                        <li>Optional premium for extra content</li>
-                    </ul>
+                <div class="wheel-stage">
+                    <div class="stage-meta"><span><i class="signal"></i> LIVE DEMO</span><span id="demo-spins-left">5 SPINS LEFT</span></div>
+                    <div class="wheel-shell">
+                        <span class="wheel-pointer" aria-hidden="true"></span>
+                        <div class="wheel" id="demo-wheel" aria-hidden="true">
+                            <span style="--angle: 0deg">TRUTH</span>
+                            <span style="--angle: 90deg">CHALLENGE</span>
+                            <span style="--angle: 180deg">PENALTY</span>
+                            <span style="--angle: 270deg">RULE</span>
+                        </div>
+                        <button class="spin" type="button" aria-label="Spin the demo wheel" disabled>SPIN</button>
+                    </div>
+                    <p class="wheel-result" id="demo-result" role="status">Spin for a taste of FIFTN.</p>
+                    <a class="btn primary" id="demo-download" href="./download/" hidden>Keep playing in FIFTN</a>
                 </div>
             </div>
 
-            <!-- <div class="cta-row">
-                <a class="btn" href="https://apps.apple.com" target="_blank">
-                    Download on App Store
-                </a>
-                <a class="btn btn-ghost" href="#/privacy">Privacy</a>
-            </div> -->
-
-            <p class="fine">
-                Contact: <a href="mailto:fiftn.party@gmail.com">fiftn.party@gmail.com</a>
-            </p>
+            <div class="modes">
+                <div class="section-heading">
+                    <p class="eyebrow">THE LINEUP</p>
+                    <h2>Pick your kind of chaos.</h2>
+                </div>
+                <ol class="mode-list">
+                    <li><span class="mode-no">01</span><h3>Fifteen Minutes of Chaos</h3><p>Spin the wheel. Take the prompt. Pass the phone.</p></li>
+                    <li><span class="mode-no">02</span><h3>Never Have I Ever</h3><p>Find out who's done what.</p></li>
+                    <li><span class="mode-no">03</span><h3>Who's Most Likely</h3><p>Read the prompt and let the group vote.</p></li>
+                    <li><span class="mode-no">04</span><h3>Fast Enough</h3><p>Put your reactions to the test.</p></li>
+                    <li><span class="mode-no">05</span><h3>Spin the Bottle</h3><p>Let the bottle pick who's next.</p></li>
+                </ol>
+                <div class="premium-note">
+                    <span class="tag">FIFTN PREMIUM</span>
+                    <p><strong>Put your inside jokes on the wheel.</strong> Create and save your own segments for Classic, with your own prompts and a choice of colours. Premium also unlocks Spicy, Sexy, Extreme and Festival, and removes ads. Choose monthly or lifetime access; available prices and any free trial are shown in the App before purchase.</p>
+                </div>
+            </div>
         </section>
 
         <!-- TERMS -->
         <section class="card route" data-route="terms" hidden>
             <div class="doc-head">
                 <h1>Terms of Service</h1>
-                <p class="fine">Last updated: <span id="tos-date">2026-01-30</span></p>
+                <p class="fine">Last updated: <span id="tos-date">2026-11-03</span></p>
             </div>
 
             <div class="doc">
@@ -119,10 +118,16 @@
 
                 <h2>5. Premium Purchases</h2>
                 <p>
-                    The App may offer one-time purchases (e.g., Premium, Ads-free) via
-                    Apple In-App Purchase. Prices and availability may vary by region
-                    and are shown in the App. Purchases are managed by Apple; refunds
-                    follow Apple’s policies.
+                    The App offers one-time purchases and may offer a monthly Premium
+                    subscription through the App Store or Google Play. Available offers,
+                    trial eligibility, prices, and billing terms are shown before confirmation.
+                </p>
+                <p>
+                    If you start a free trial that converts to a paid subscription, the store
+                    charges the displayed price after the trial unless you cancel in time.
+                    Monthly subscriptions renew automatically unless cancelled. Manage or cancel
+                    your subscription in the store account used to purchase it. Refunds are
+                    handled by the relevant store, without limiting your statutory rights.
                 </p>
 
                 <h2>6. Ads</h2>
@@ -134,9 +139,11 @@
 
                 <h2>7. User Content & Conduct</h2>
                 <p>
-                    If the App ever allows user-submitted content (e.g., custom prompts),
-                    you must not submit content that is illegal, hateful, harassing,
-                    sexually exploitative, or violates third-party rights.
+                    My Segments lets you write questions and challenges for your own wheel.
+                    The App stores these locally and does not publish or share them with other
+                    FIFTN users. Do not create content that is illegal, hateful, harassing,
+                    sexually exploitative, or violates third-party rights. Respect everyone’s
+                    consent and skip anything that makes a player uncomfortable.
                 </p>
 
                 <h2>8. Intellectual Property</h2>
@@ -194,100 +201,125 @@
             <div class="doc-head">
                 <h1>Privacy Policy</h1>
                 <p class="fine">
-                    Last updated: <span id="pp-date">2026-01-30</span>
+                    Last updated: <span id="pp-date">2026-11-04</span>
                 </p>
             </div>
 
             <div class="doc">
                 <h2>1. Overview</h2>
                 <p>
-                    This Privacy Policy explains how FIFTN (“we”, “us”) handles personal
-                    data when you use the FIFTN app (“App”). We aim to collect the
-                    minimum necessary data to run and improve the App.
+                    Brent Opsomer is responsible for the personal data described in this
+                    Privacy Policy when you use the FIFTN app (“App”). For privacy
+                    questions or requests, use the contact details in section 11.
                 </p>
 
-                <h2>2. Data We May Collect</h2>
-                <h3>2.1 Analytics & Diagnostics</h3>
-                <ul>
-                    <li>
-                        App interactions/events (e.g., game selected, prompts viewed) to
-                        improve product performance.
-                    </li>
-                    <li>
-                        Crash reports and diagnostics to fix bugs and improve stability.
-                    </li>
-                    <li>
-                        Device information (approximate, like OS version, device model).
-                    </li>
-                </ul>
-
-                <h3>2.2 Purchases</h3>
+                <h2>2. My Segments and Local Gameplay</h2>
                 <p>
-                    Purchases are processed by Apple. We may receive limited purchase
-                    metadata (e.g., entitlement status) through our purchase provider to
-                    unlock premium features. We do not receive your full payment card
-                    details.
+                    Names, colours and texts you enter in My Segments are saved in the App’s
+                    local storage. FIFTN does not upload these entries to its servers or
+                    include their names or texts in the gameplay events it sends to PostHog.
+                    A gameplay event may record that a custom segment was used, without
+                    recording what was written in it. Player names entered for local gameplay
+                    are used in the game; you do not need to use real names.
                 </p>
-
-                <h3>2.3 Ads (if enabled)</h3>
                 <p>
-                    If ads are shown, ad partners may collect information such as
-                    advertising identifiers and basic device info to serve and measure
-                    ads, subject to your device settings and consent choices.
+                    You can delete saved segments in the App when the editor is available.
+                    Clearing app data or uninstalling can remove local saves. FIFTN does not
+                    provide its own cloud sync for My Segments. Device backups may copy local
+                    app data depending on your operating system and settings.
                 </p>
 
-                <h2>3. What We Don’t Collect</h2>
-                <ul>
-                    <li>We do not require your real name to play.</li>
-                    <li>
-                        Player names entered for a session are intended for gameplay and
-                        need not be personally identifying.
-                    </li>
-                    <li>
-                        We do not sell personal data in the conventional sense.
-                    </li>
-                </ul>
-
-                <h2>4. How We Use Data</h2>
-                <ul>
-                    <li>Provide core app functionality and premium unlocks</li>
-                    <li>Improve gameplay balance, UX, and retention</li>
-                    <li>Debugging, crash analysis, and security</li>
-                    <li>Measure marketing performance (aggregated)</li>
-                </ul>
-
-                <h2>5. Legal Bases (EEA/UK)</h2>
-                <ul>
-                    <li>Performance of a contract (providing the App)</li>
-                    <li>Legitimate interests (analytics, stability, fraud prevention)</li>
-                    <li>Consent (where required, e.g., certain ads/trackers)</li>
-                </ul>
-
-                <h2>6. Sharing</h2>
+                <h2>3. Data Used by Online Services</h2>
+                <h3>3.1 Firebase Authentication and Backend</h3>
                 <p>
-                    We may share data with service providers that help us operate the
-                    App, such as analytics, crash reporting, purchase entitlement
-                    management, and advertising providers. These providers process data
-                    on our behalf under contractual safeguards.
+                    FIFTN uses Google Firebase to assign an anonymous account identifier without
+                    asking you for an email address or password. Firebase services support
+                    game content, Premium access checks, and promo code redemption. The
+                    backend uses account and network information to limit abuse and records
+                    redemptions and the access they grant. For promotional rewards, it also
+                    records the claim time and access expiry against your Firebase account
+                    identifier to prevent repeat claims. These rewards do not create a
+                    subscription or renew automatically.
                 </p>
 
-                <h2>7. Retention</h2>
+                <h3>3.2 Purchases and Trials</h3>
                 <p>
-                    We retain data only as long as necessary for the purposes described
-                    above, or as required by law.
+                    Apple or Google processes payments. FIFTN uses RevenueCat to check and
+                    restore access and receives purchase metadata such as the product,
+                    trial status, and access expiry. FIFTN does not receive your full
+                    payment card details.
                 </p>
 
-                <h2>8. Your Choices & Rights</h2>
+                <h3>3.3 Product Analytics</h3>
+                <p>
+                    Where enabled, PostHog receives app events such as game starts, wheel
+                    results by category, Premium screen views, and purchase and trial events,
+                    along with app and device information. Purchase analytics may include
+                    the product identifier, trial status and expiry. Promo redemption
+                    analytics may include a campaign label and an internal code reference,
+                    rather than the redeemable code itself. We use these events to understand
+                    gameplay and improve the App. Events can be associated with your Firebase
+                    account identifier. In app versions with the analytics choice, PostHog
+                    starts only after you allow optional analytics. You can change your choice
+                    in Settings > Privacy without affecting gameplay, Premium or purchases.
+                    Turning analytics off stops new analytics collection in the app; it does
+                    not automatically erase events already sent. Older app versions may
+                    have associated the Firebase identifier with RevenueCat analytics.
+                </p>
+
+                <h3>3.4 Advertising</h3>
+                <p>
+                    The free version may display ads through Google AdMob. FIFTN requests
+                    non-personalized ads in its end-of-game ad flow. Ad services may still
+                    process device or network information and identifiers to deliver and
+                    measure ads and prevent abuse, depending on the platform and your settings.
+                </p>
+
+                <h2>4. How We Use Data and Legal Bases (EEA/UK)</h2>
                 <ul>
-                    <li>
-                        You can manage tracking/ads permissions via iOS settings (e.g.,
-                        App Tracking Transparency) and in-app settings if available.
-                    </li>
-                    <li>
-                        Depending on your location, you may have rights to access,
-                        correct, delete, or object to processing of your data.
-                    </li>
+                    <li>To provide the App and grant purchased or redeemed access, as necessary to provide the service you request.</li>
+                    <li>To keep the App secure and prevent abuse, based on our legitimate interests where applicable.</li>
+                    <li>To understand usage and improve the App with optional PostHog analytics, based on your consent in versions that offer this choice.</li>
+                    <li>For advertising, consent where required by applicable law.</li>
+                    <li>To comply with legal obligations where applicable.</li>
                 </ul>
+
+                <h2>5. Recipients</h2>
+                <p>
+                    The services described above involve Google Firebase, RevenueCat,
+                    PostHog and Google AdMob. Apple and Google also handle purchases
+                    through their own stores under their own privacy policies.
+                </p>
+
+                <h2>6. Retention</h2>
+                <p>
+                    Local saves remain subject to your in-app deletion and device settings.
+                    For online data, retention depends on the purpose: access and redemption
+                    records support access verification and abuse prevention; analytics
+                    records support usage measurement and product improvement. Data may
+                    also be retained as required by law.
+                </p>
+
+                <h2>7. Your Choices</h2>
+                <p>
+                    You can manage device-level tracking and advertising permissions in your
+                    operating system settings where supported. In current app versions, you
+                    can change optional analytics in Settings under Privacy. Where available,
+                    the advertising privacy option in the same section lets you reopen the
+                    advertising consent form and change your choices. Advertising choices
+                    are separate from optional analytics consent; declining analytics does
+                    not remove ads. You can manage subscriptions
+                    through your store account. Deleting the App does not cancel a subscription.
+                </p>
+
+                <h2>8. Your Rights</h2>
+                <p>
+                    Depending on applicable law, you can request access, correction,
+                    deletion, restriction or portability of personal data, object to certain
+                    processing, or withdraw consent where we rely on it. You may also
+                    complain to your data protection authority. Use the contact below for
+                    requests about data FIFTN holds.
+                </p>
 
                 <h2>9. Children</h2>
                 <p>
@@ -326,6 +358,8 @@
             <a href="#/terms">Terms</a>
             <span class="dot">•</span>
             <a href="#/privacy">Privacy</a>
+            <span class="dot" aria-hidden="true">&#8226;</span>
+            <a href="mailto:fiftn.party@gmail.com">Contact</a>
         </div>
     </footer>
 
