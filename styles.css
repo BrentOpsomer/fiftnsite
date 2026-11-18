@@ -93,6 +93,28 @@ h1, h2, h3, p { margin: 0; }
 .btn:hover { border-color: var(--cyan); }
 .primary { background: var(--cyan); border-color: var(--cyan); color: #081313; }
 .primary:hover { background: #b5ffff; }
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  min-height: 66px;
+  min-width: 182px;
+  padding: 11px 19px;
+  border: 1px solid #ffffff38;
+  border-radius: 13px;
+  background: linear-gradient(155deg, #25232a, #101014 75%);
+  box-shadow: 0 4px 12px #00000026, inset 0 1px 0 #ffffff0b;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color .18s ease, background-color .18s ease;
+}
+.store-badge:hover { border-color: #ffffff85; background: #25232a; }
+.store-badge:active { background: #101014; }
+.store-icon { display: block; width: 30px; height: 34px; flex-shrink: 0; object-fit: contain; }
+.store-copy { display: flex; flex-direction: column; gap: 2px; text-align: left; white-space: nowrap; }
+.store-caption { font-size: .67rem; line-height: 1.2; font-weight: 400; letter-spacing: .025em; color: #e4e1e8; }
+.store-name { font-size: 1.32rem; line-height: 1.13; font-weight: 700; letter-spacing: -.035em; }
 .micro { color: var(--muted); margin-top: 16px; }
 .micro span { color: var(--pink); padding-inline: 3px; }
 
@@ -175,8 +197,8 @@ h1, h2, h3, p { margin: 0; }
   letter-spacing: -.07em;
 }
 .download-panel h1 em { color: var(--pink); font-style: normal; }
-.download-stores { width: min(100%, 360px); display: grid; gap: 10px; margin-top: 8px; }
-.download-stores .btn { justify-content: space-between; text-align: left; }
+.download-stores { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 12px; }
+.download-stores .store-badge { flex: 1 1 182px; max-width: 240px; }
 .download-panel .micro { margin-top: 6px; }
 
 .modes { border-top: 1px solid var(--line); padding-block: clamp(34px, 6vw, 70px); }
@@ -223,4 +245,5 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .hero-copy { animation: none; }
   .wheel { transition: none; }
+  .store-badge { transition: none; }
 }
